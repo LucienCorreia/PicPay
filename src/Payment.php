@@ -11,6 +11,15 @@ class Payment {
     protected $expiresAt;
     protected $buyer;
 
+    public function __construct(? array $payment) {
+        $this->referenceId = $payment['referenceId'];
+        $this->callbackUrl = $payment['callbackUrl'];
+        $this->returnUrl = $payment['returnUrl'];
+        $this->value = $payment['value'];
+        $this->expiresAt = $payment['expiresAt'];
+        $this->buyer = $payment['buyer'];
+    }
+
     public function setReferenceId(string $refenreceId) {
         $this->referenceId = $refenreceId;
     }
