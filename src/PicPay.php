@@ -1,6 +1,5 @@
 <?php
 
-use Exception;
 use GuzzleHttp\Client;
 
 namespace PicPay;
