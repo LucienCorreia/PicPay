@@ -8,5 +8,10 @@
             "name": "Lucien Risso Correia",
             "email": "lucien@wadvice.com.br"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "PicPay\\": "src/"
+        }
+    }
 }
