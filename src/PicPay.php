@@ -1,8 +1,8 @@
 <?php
 
-use GuzzleHttp\Client;
-
 namespace PicPay;
+
+use GuzzleHttp\Client;
 
 /**
  * @author Lucien
