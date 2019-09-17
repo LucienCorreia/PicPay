@@ -11,7 +11,7 @@ class Payment {
     /**
      * @var string Id referencia
      */
-    protected $refenreceId;
+    protected $referenceId;
 
     /**
      * @var string Url de callback
@@ -52,10 +52,10 @@ class Payment {
     }
 
     /**
-     * @param string $refenreceId
+     * @param string $referenceId
      */
-    public function setReferenceId(string $refenreceId) {
-        $this->referenceId = $refenreceId;
+    public function setReferenceId(string $referenceId) {
+        $this->referenceId = $referenceId;
     }
 
     /**
@@ -142,7 +142,7 @@ class Payment {
      */
     public function toArray() : array {
         return [
-            'refenreceId' => $this->refenreceId,
+            'referenceId' => $this->referenceId,
             'callbackUrl' => $this->callbackUrl,
             'returnUrl' => $this->returnUrl,
             'value' => $this->value,
