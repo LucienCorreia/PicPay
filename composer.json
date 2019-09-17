@@ -1,14 +1,20 @@
 {
-    "name": "wadvice/pic-pay-sdk",
-    "require": {
-        "guzzlehttp/guzzle": "^6.3"
-    },
+    "name": "lucien-correia/pic-pay",
+    "description": "PicPay SDK",
+    "license": "MIT",
     "authors": [
         {
             "name": "Lucien Risso Correia",
-            "email": "lucien@wadvice.com.br"
+            "email": "lucien@wadvice.com.br",
+            "homepage": "https://www.wadvice.com.br"
         }
     ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "jms/serializer": "1.7.0",
+        "phpdocumentor/phpdocumentor": "^2.9"
+    },
     "autoload": {
         "psr-4": {
             "PicPay\\": "src/"
