@@ -46,7 +46,7 @@ class Payment {
     public function __construct(array $payment = []) {
         foreach(get_object_vars($this) as $k => $v) {
             if(array_key_exists($k, $payment)) {
-                $this->$k = $buyer[$k];
+                $this->$k = $payment[$k];
             }
         }
     }
