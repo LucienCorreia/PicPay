@@ -64,6 +64,7 @@ class PicPay {
 
             $response = $client->post(self::$baseUri . '/payments', [
                 'headers' => [
+                    'Accept-Encoding' => 'gzip',
                     'Content-Type' => 'application/json',
                     'x-picpay-token' => self::$picpayToken
                 ],
