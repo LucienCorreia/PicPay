@@ -67,7 +67,7 @@ class PicPay {
                     'Content-Type' => 'application/json',
                     'x-picpay-token' => self::$picpayToken
                 ],
-                'json' => $payment->toArray
+                'json' => $payment->toArray()
             ]);
 
             return $response->getBody()->getContents();
