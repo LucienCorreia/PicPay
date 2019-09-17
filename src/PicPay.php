@@ -60,7 +60,7 @@ class PicPay {
 
         $client = new Client;
 
-        try {
+        //try {
 
             $response = $client->post(self::$baseUri . '/payments', [
                 'headers' => [
@@ -71,8 +71,8 @@ class PicPay {
             ]);
 
             return $response->getBody()->getContents();
-        } catch (Exception $e) {
-            return $e->getMessage();
-        }
+        // } catch (Exception $e) {
+        //     return $e->getMessage();
+        // }
     }
 }
