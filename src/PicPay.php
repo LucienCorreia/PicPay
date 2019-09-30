@@ -73,7 +73,60 @@ class PicPay {
 
             return $response->getBody()->getContents();
         } catch (Exception $e) {
-             return $e->getMessage();
+            return $e->getMessage();
+        }
+    }
+
+    /**
+     * Consulta de status
+     * 
+     * @param string $referenceId
+     */
+    public function status(string $referenceId) {
+
+        $client = new Client;
+
+        try {
+
+            $response = $client->get(self::$baseUri . '/payments/' . $referenceId . '/status', [
+                'headers' => [
+                    'Accept-Encoding' => 'gzip',
+                    'Content-Type' => 'application/json',
+                    'x-picpay-token' => self::$picpayToken
+                ]
+            ]);
+
+            return $response->getBody()->getContents();
+        } catch(Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    /**
+     * Cancelar pagamento
+     * 
+     * @param string $authorizationId
+     */
+    public function cancel(string $authorizationId) {
+
+        $client = new Client;
+
+        try {
+
+            $response = $client->post(self::$baseUri . '/payments/' . $referenceId . '/cancellations', [
+                'headers' => [
+                    'Accept-Encoding' => 'gzip',
+                    'Content-Type' => 'application/json',
+                    'x-picpay-token' => self::$picpayToken
+                ],
+                'json' => [
+                    'authorizationId' => $authorizationId
+                ]
+            ]);
+
+            return $response->getBody()->getContents();
+        } catch(Exception $e) {
+            return $e->getMessage();
         }
     }
 }
