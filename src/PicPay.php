@@ -71,7 +71,7 @@ class PicPay {
                 'json' => $payment->toArray()
             ]);
 
-            return $response->getBody()->getContents();
+            return json_decode($response->getBody()->getContents());
         } catch (Exception $e) {
             return $e->getMessage();
         }
@@ -96,7 +96,7 @@ class PicPay {
                 ]
             ]);
 
-            return $response->getBody()->getContents();
+            return json_decode($response->getBody()->getContents());
         } catch(Exception $e) {
             return $e->getMessage();
         }
@@ -124,7 +124,7 @@ class PicPay {
                 ]
             ]);
 
-            return $response->getBody()->getContents();
+            return json_decode($response->getBody()->getContents());
         } catch(Exception $e) {
             return $e->getMessage();
         }
