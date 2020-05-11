@@ -106,8 +106,9 @@ class PicPay {
      * Cancelar pagamento
      * 
      * @param string $authorizationId
+     * @param string $referenceId
      */
-    public function cancel(string $authorizationId) {
+    public function cancel(string $authorizationId, String $referenceId) {
 
         $client = new Client;
 
